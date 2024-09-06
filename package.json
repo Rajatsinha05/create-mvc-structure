@@ -1,0 +1,15 @@
+{
+  "name": "create-mvc-structure",
+  "version": "1.0.0",
+  "description": "CLI tool to generate a Node.js MVC boilerplate",
+  "main": "index.js",
+  "bin": {
+    "create-mvc-structure": "./index.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "dotenv": "^10.0.0"
+  },
+  "author": "Your Name",
+  "license": "MIT"
+}

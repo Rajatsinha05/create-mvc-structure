@@ -57,7 +57,7 @@ const files = [
   },
   {
     filename: '.env',
-    content: 'PORT=3000\nDATABASE_URL=mongodb://localhost:27017/myapp\n',
+    content: 'PORT=8090\nDATABASE_URL=mongodb://localhost:27017/myapp\n',
   },
   {
     filename: 'index.js',
@@ -66,7 +66,7 @@ const express = require('express');
 const app = express();
 const path = require('path');
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 8090;
 
 // Middleware
 app.use(express.json());

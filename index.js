@@ -1,6 +1,5 @@
 #!/usr/bin/env node
 
-
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
@@ -91,11 +90,15 @@ app.listen(PORT, () => {
         main: 'index.js',
         scripts: {
           start: 'node index.js',
+          dev: 'nodemon index.js',
         },
         dependencies: {
           express: '^4.17.1',
           dotenv: '^10.0.0',
         },
+        devDependencies: {
+          nodemon: '^2.0.15'
+        }
       },
       null,
       2
@@ -114,4 +117,13 @@ createFiles(files);
 console.log('Installing dependencies...');
 execSync('npm install', { stdio: 'inherit', cwd: projectPath });
 
-console.log('MVC Boilerplate has been successfully set up in', projectName);
+// Provide user instructions after installation
+console.log(`\nSuccess! MVC Boilerplate has been created in '${projectName}'`);
+console.log(`\nTo get started:`);
+console.log(`  1. Navigate into the project folder:`);
+console.log(`     cd ${projectName}`);
+console.log(`  2. Run the project:`);
+console.log(`     npm start`);
+console.log(`\nOptional: If you prefer automatic restarts when editing code, you can use nodemon (already included):`);
+console.log(`     npm run dev`);
+console.log(`\nHappy coding! 🚀`);

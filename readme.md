@@ -177,5 +177,3 @@ This project is licensed under the MIT License.
    - Customize the `.env` file to change the default settings.
 
 ---
-
-This version of the `README.md` includes both options for installation—globally and via `npx`—along with instructions on how to use the tool, start the server, and configure the environment. Let me know if you'd like further customization!
